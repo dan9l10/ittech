@@ -1,5 +1,7 @@
-﻿.tabs {
+﻿   .tabs {
+	   display:flex;
     position: relative; 
+	margin-top: 60px;
    }
    .tab, .tab-title {
     display: inline-block; 
@@ -7,28 +9,26 @@
    .tab input[type="radio"] { display: none; }
    .tab-title {
     /*background: #ccc; */
-    padding: 5px 10px; 
-    /*border: 1px solid #666; */
-    border-bottom: none; 
+    padding: 5px 10px;
+    /*border: 1px solid #666;  */
    }
    .tab-content {
     position: absolute; 
-    /*border: 1px solid #666; */
+   /* border: 1px solid #666; */
     padding: 10px; 
     left: 0; 
-    width: calc(100% - 20px); 
+    width: 33%; 
     display: none; 
    }
    .tab :checked + .tab-title {
     position: relative; 
-    /*background: #fff; */
-    top: 1px; 
-    z-index: 1; 
+   /* background: #fff; */
+    
    }
    .tab :checked ~ .tab-content {
     display: block; 
    }
    .tab-title:hover {
    	background-color:rgb(212, 212, 212);
-   	border-bottom: 1px solid #000;
+   /*	border-bottom: 1px solid #000;*/
    }

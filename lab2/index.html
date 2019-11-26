@@ -2,25 +2,88 @@
 <html>
  <head>
   <meta charset="utf-8">
-  <title>Вкладки</title>
+  <title>Pages</title>
  <link rel="stylesheet" type="text/css" href="style.css">
+ <style>
+ 	.absolute{
+		position: absolute;
+		top: 50px;
+		left: 50px;
+		height: 50px;
+		width: 100px;
+		background: red;
+	 }
+	.relative{
+		position:relative;
+		height: 50px;
+		background: green;
+	 }
+	 .fixed{
+	 position:fixed;
+		background: yellow;
+		margin:5px;
+	 }
+	 #fix{
+	 font-size:10px;
+	}
+	#container{
+	margin-top:40px;
+	}
+	.image{
+	float:right;
+	}
+ </style>
  </head>
  <body>
+ <div class="container">
+	<div class="absolute">
+		<p>absolute</p>
+	</div>
+	<div class="relative">
+		<p>relative</p>
+	</div>
+	<div class="fixed">
+		<p id="fix">fixed</p>
+	</div>
+ </div>
+ 
+ 
+ 
+ 
+ <div id="container">
+ <img src="img.jpg" class="image">
+ <p>Існує багато варіацій уривків з Lorem Ipsum, 
+ але більшість з них зазнала певних змін на кшталт
+ жартівливих вставок або змішування слів, які навіть не 
+ виглядають правдоподібно. Якщо ви збираєтесь використовувати
+ Lorem Ipsum, ви маєте упевнитись в тому, що всередині тексту не
+ приховано нічого, що могло б викликати у читача конфуз. Більшість 
+ відомих генераторів Lorem Ipsum в Мережі генерують текст шляхом 
+ повторення наперед заданих послідовностей Lorem Ipsum. Принципова
+ відмінність цього генератора робить його першим справжнім генератором 
+ Lorem Ipsum. Він використовує словник з більш як 200 слів латини та цілий
+ набір моделей речень - це дозволяє генерувати Lorem Ipsum, який виглядає
+ осмислено. Таким чином, згенерований Lorem Ipsum не міститиме повторів, жартів, 
+ нехарактерних для латини слів і т.ін.</p>
+ <div>
+ 
+ 
+ 
   <div class="tabs">
    <div class="tab">
-    <input type="radio" id="tab1" name="tab-group" checked>
-    <label for="tab1" class="tab-title">Вкладка 1</label> 
-    <section class="tab-content">Один</section>
+    <input type="radio" id="tab1" name="tab-group" >
+    <label for="tab1" class="tab-title">Page 1</label> 
+    <span class="tab-content">Some text1</span>
    </div> 
    <div class="tab">
     <input type="radio" id="tab2" name="tab-group">
-    <label for="tab2" class="tab-title">Вкладка 2</label> 
-    <section class="tab-content">Два</section>
+    <label for="tab2" class="tab-title">Page 2</label> 
+    <span class="tab-content">Some text2</span>
    </div>
    <div class="tab">
     <input type="radio" id="tab3" name="tab-group">
-    <label for="tab3" class="tab-title">Вкладка 3</label> 
-    <section class="tab-content">Три</section> 
+    <label for="tab3" class="tab-title">Page 3</label> 
+    <span class="tab-content">Some text3</span> 
    </div> 
   </div>
  </body>

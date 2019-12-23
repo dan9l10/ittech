@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#imagen {
+			margin: 10px;
+			width: 350px;
+			height: 250px;
+		}
+		.forms{
+			display: flex;
+			flex-direction: column;
+			width: 30%;
+		}
+		.labels{
+			display: flex;
+			flex-direction: column;
+		}
+		.container_forms{
+			display: flex;
+			margin-left: 5px; 
+		}
+		input{
+			margin: 2px;
+		}
+		label{
+			padding: 2px;
+			margin: 2px;
+		}
+		p{
+			padding-left: 8px;
+		}
+	</style>
+	<script type="text/javascript">
+		function fun1() {
+    	var sel=document.getElementById('mySelect').selectedIndex;
+    	var options=document.getElementById('mySelect').options;
+    	//var variable = String(options[sel].text); 
+    	//var some = String(variable); 
+    	var images = document.getElementById('imagen');
+    	images.src = options[sel].text+'.jpg';
+    	//alert(variable);
+		}
+		//
+		function fun2(){
+		var valheight=document.getElementById('height').value;
+		var valwight=document.getElementById('weight').value;
+		var valbord=document.getElementById('bord').value;
+		//alert(valbord);
+		document.getElementById('imagen').border=valbord+'px';
+		document.getElementById('imagen').style.width=valwight+'px';
+		document.getElementById('imagen').style.height=valheight+'px';
+		}
+	</script>
+</head>
+<body>
+	<div id="container">
+		<label>Make your choice</label>
+		<select id="mySelect" onchange="fun1()">
+		  	<option>Жигули</option>
+		  	<option>Мерседес</option>
+		  	<option>Москвич</option>
+		  	<option>Волга</option>
+		</select>
+    </div>
+    <div class="container_img">
+    	<img id="imagen" src="Жигули.jpg" border="1px">
+    </div>
+    <div class="container_forms">
+    <div class="labels">
+    		<label>Width</label>
+    		<label>Height</label>
+    		<label>Border</label>
+    	</div>
+    <div class="forms">
+    	<input type="text" name="width" id="height">
+    	<input type="text" name="height" id=weight>
+    	<input type="text" name="border" id="bord">
+    </div>
+    </div>
+    <p><input type="submit" id="button" value="OK" onclick="fun2()"></p>
+</body>
+</html>

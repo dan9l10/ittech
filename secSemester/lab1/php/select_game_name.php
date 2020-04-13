@@ -39,7 +39,7 @@ $_SESSION['data']=[
     ];
 //print_r($_SESSION['data']);
 //exit();
-header('location: /lab1/ittech/secSemester/lab1/');
+header('location: ../index.php');
 
 
 

@@ -33,7 +33,7 @@ $_SESSION['data']=[
         "date"=>$date
     ];
 //print_r($_SESSION['data']);
-header('location: /lab1/ittech/secSemester/lab1/');
+header('location: ../index.php');
 /* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates

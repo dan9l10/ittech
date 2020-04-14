@@ -1,6 +1,6 @@
 <?php
 include 'connect.php';
-session_start();
+//session_start();
 $request=$dbh->prepare("select league from team");
 $request->execute();
 $request=$request->fetchAll();

@@ -2,6 +2,7 @@
 <?php
 include 'php/connect.php';
 require_once 'php/select_name.php';
+require_once 'php/select_league.php';
 ?>
 <html>
     <head>
@@ -20,14 +21,14 @@ require_once 'php/select_name.php';
         <h2>Select date</h2>
         <input id="date" onchange="xhr()" type="date" name="date" min="2020-03-28" value="<?php echo date("Y-m-d")?>">  
          <h2>Select name</h2>
-         <form  method="POST" action="php/select_game_name.php">
-            <select name="name">
+         <!--<form  method="POST" action="php/select_game_name.php">-->
+             <select name="name" onchange="xmlhr()" id="name">
             <?php foreach($_SESSION['name'] as $row):?>
                 <option value="<?=$row?>"><?=$row?></option>
             <?php endforeach; ?>
             </select>
-            <input type="submit" value="OK">
-        </form>
+            <!--<input type="submit" value="OK">-->
+        <!--</form>-->
          <table border="1" class="table_blur">
         <thead>
             <tr>

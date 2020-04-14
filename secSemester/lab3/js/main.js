@@ -3,7 +3,7 @@ const ajax = new XMLHttpRequest();
 function text(){
     var variable = document.getElementById("league").value;
   //alert(variable);
-    ajax.open("GET","../lab2/php/league.php?league=" + variable);
+    ajax.open("GET","../lab3/php/league.php?league=" + variable);
     ajax.onreadystatechange=redraw;
     ajax.send();
 }
@@ -16,7 +16,7 @@ function xhr(){
     let date = document.getElementById("date").value;
     //alert(date);
     
-    ajax.open("POST","../lab2/php/ajax_date.php");
+    ajax.open("POST","../lab3/php/ajax_date.php");
     ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     ajax.onload=function(){
         if(ajax.status ===200){
@@ -37,7 +37,7 @@ function xhr(){
 function xmlhr(){
     var select = document.getElementById("name").value;
     //alert(select);
-    ajax.open("POST","../lab2/php/select_game_name_xml.php");
+    ajax.open("POST","../lab3/php/select_game_name_xml.php");
     ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     ajax.onreadystatechange = function() 
     { 
